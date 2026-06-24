@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KicauMania - Pusat Burung Kicau</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ============ NAVBAR ============ -->
+    <nav class="bg-[#2d5a27] shadow-md fixed w-full top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <a href="#" class="flex items-center gap-2">
+                    <span class="text-2xl font-bold text-[#ffd700]">Kicau<span class="text-2xl font-bold text-white">Mania</span></span>
+                    
+                </a>
+
+                <button id="hamburger" class="md:hidden flex flex-col gap-1.5 p-2">
+                    <span class="block w-7 h-0.5 bg-white rounded transition-all"></span>
+                    <span class="block w-7 h-0.5 bg-white rounded transition-all"></span>
+                    <span class="block w-7 h-0.5 bg-white rounded transition-all"></span>
+                </button>
+
+                <ul id="navMenu" class="hidden md:flex md:items-center md:gap-8 absolute md:static top-full left-0 w-full md:w-auto bg-[#2d5a27] md:bg-transparent flex-col md:flex-row py-4 md:py-0 shadow-lg md:shadow-none border-t md:border-t-0 border-[#4a7a44]">
+                    <li><a href="#home" class="block px-6 py-2 text-white hover:text-[#ffd700] transition font-medium">Beranda</a></li>
+                    <li><a href="#about" class="block px-6 py-2 text-white hover:text-[#ffd700] transition font-medium">Tentang Kami</a></li>
+                    <li><a href="#services" class="block px-6 py-2 text-white hover:text-[#ffd700] transition font-medium">Layanan</a></li>
+                    <li><a href="#portfolio" class="block px-6 py-2 text-white hover:text-[#ffd700] transition font-medium">Portfolio</a></li>
+                    <li><a href="#team" class="block px-6 py-2 text-white hover:text-[#ffd700] transition font-medium">Tim</a></li>
+                    <li><a href="#testimonials" class="block px-6 py-2 text-white hover:text-[#ffd700] transition font-medium">Testimoni</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ============ HERO SLIDER  ============ -->
+    <section id="home" class="pt-20 md:pt-24 min-h-screen flex items-center relative overflow-hidden">
+
+        <div class="absolute inset-0 w-full h-full">
+            
+            <!-- SLIDE 1 -->
+            <div class="slide w-full h-full absolute top-0 left-0 flex items-center justify-center transition-opacity duration-1000 opacity-100" data-slide="0" style="background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1552728089-57bdde30beb3?w=1200') center/cover no-repeat;">
+                <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-20">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-16 items-center">
+                        <div class="text-center md:text-left order-2 md:order-1">
+                            <p class="text-[#ffd700] font-semibold text-sm uppercase tracking-wider">Pusat Burung Kicau</p>
+                            <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight">
+                                <span class="text-[#ffd700]">Kicau</span>
+                                <br />
+                                <span class="text-white">Mania</span>
+                            </h1>
+                            <p class="text-lg sm:text-xl text-gray-300 mt-4 max-w-lg mx-auto md:mx-0">Pusat Perlengkapan dan Perawatan Burung Terlengkap</p>
+                            <div class="mt-6 flex flex-wrap gap-3 justify-center md:justify-start">
+                                <a href="#portfolio" class="btn-slide bg-[#ffd700] text-[#2d5a27] px-8 py-3.5 rounded-full font-bold hover:bg-yellow-300 transition-all duration-300 shadow-lg hover:shadow-[#ffd700]/30 hover:scale-105 inline-block">Lihat Koleksi</a>
+                                <a href="https://wa.me/6281234567890" target="_blank" class="btn-slide border-2 border-[#ffd700] text-white px-8 py-3.5 rounded-full font-bold hover:bg-[#ffd700] hover:text-[#2d5a27] transition-all duration-300 hover:scale-105 inline-block">Hubungi Kami</a>
+                            </div>
+                        </div>
+                        <div class="flex justify-center items-center order-1 md:order-2">
+                            <div class="relative">
+                                <div class="w-64 h-64 sm:w-72 sm:h-72 md:w-80 md:h-80 lg:w-96 lg:h-96 bg-[#ffd700]/20 rounded-3xl flex items-center justify-center border-2 border-[#ffd700]/30 backdrop-blur-sm">
+                                    <span class="text-8xl sm:text-9xl md:text-[10rem]">🐦</span>
+                                </div>
+                                <div class="absolute -bottom-2 -right-2 bg-white rounded-2xl shadow-xl px-5 py-3 min-w-[120px]">
+                                    <p class="text-base font-semibold text-[#2d5a27] text-center">⭐ 4.9</p>
+                                    <p class="text-sm text-gray-500 text-center">500+ pelanggan</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SLIDE 2 -->
+            <div class="slide w-full h-full absolute top-0 left-0 flex items-center justify-center transition-opacity duration-1000 opacity-0" data-slide="1" style="background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1552728089-57bdde30beb3?w=1200') center/cover no-repeat;">
+                <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-20">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-16 items-center">
+                        <div class="text-center md:text-left order-2 md:order-1">
+                            <p class="text-[#ffd700] font-semibold text-sm uppercase tracking-wider">Burung Berkualitas</p>
+                            <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight">
+                                <span class="text-[#ffd700]">Burung</span>
+                                <br />
+                                <span class="text-white">Berkualitas</span>
+                            </h1>
+                            <p class="text-lg sm:text-xl text-gray-300 mt-4 max-w-lg mx-auto md:mx-0">Dapatkan burung kicau terbaik dengan kualitas unggulan</p>
+                            <div class="mt-6 flex flex-wrap gap-3 justify-center md:justify-start">
+                                <a href="#portfolio" class="btn-slide bg-[#ffd700] text-[#2d5a27] px-8 py-3.5 rounded-full font-bold hover:bg-yellow-300 transition-all duration-300 shadow-lg hover:shadow-[#ffd700]/30 hover:scale-105 inline-block">Lihat Koleksi</a>
+                                <a href="https://wa.me/6281234567890" target="_blank" class="btn-slide border-2 border-[#ffd700] text-white px-8 py-3.5 rounded-full font-bold hover:bg-[#ffd700] hover:text-[#2d5a27] transition-all duration-300 hover:scale-105 inline-block">Hubungi Kami</a>
+                            </div>
+                        </div>
+                        <div class="flex justify-center items-center order-1 md:order-2">
+                            <div class="relative">
+                                <div class="w-64 h-64 sm:w-72 sm:h-72 md:w-80 md:h-80 lg:w-96 lg:h-96 bg-[#ffd700]/20 rounded-3xl flex items-center justify-center border-2 border-[#ffd700]/30 backdrop-blur-sm">
+                                    <span class="text-8xl sm:text-9xl md:text-[10rem]">🏆</span>
+                                </div>
+                                <div class="absolute -bottom-2 -right-2 bg-white rounded-2xl shadow-xl px-5 py-3 min-w-[120px]">
+                                    <p class="text-base font-semibold text-[#2d5a27] text-center">🏅 Juara</p>
+                                    <p class="text-sm text-gray-500 text-center">Lomba Burung</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SLIDE 3 -->
+            <div class="slide w-full h-full absolute top-0 left-0 flex items-center justify-center transition-opacity duration-1000 opacity-0" data-slide="2" style="background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1552728089-57bdde30beb3?w=1200') center/cover no-repeat;">
+                <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-20">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-16 items-center">
+                        <div class="text-center md:text-left order-2 md:order-1">
+                            <p class="text-[#ffd700] font-semibold text-sm uppercase tracking-wider">Perawatan Profesional</p>
+                            <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight">
+                                <span class="text-[#ffd700]">Perawatan</span>
+                                <br />
+                                <span class="text-white">Profesional</span>
+                            </h1>
+                            <p class="text-lg sm:text-xl text-gray-300 mt-4 max-w-lg mx-auto md:mx-0">Kami rawat burung kesayangan Anda dengan tenaga ahli</p>
+                            <div class="mt-6 flex flex-wrap gap-3 justify-center md:justify-start">
+                                <a href="#portfolio" class="btn-slide bg-[#ffd700] text-[#2d5a27] px-8 py-3.5 rounded-full font-bold hover:bg-yellow-300 transition-all duration-300 shadow-lg hover:shadow-[#ffd700]/30 hover:scale-105 inline-block">Lihat Koleksi</a>
+                                <a href="https://wa.me/6281234567890" target="_blank" class="btn-slide border-2 border-[#ffd700] text-white px-8 py-3.5 rounded-full font-bold hover:bg-[#ffd700] hover:text-[#2d5a27] transition-all duration-300 hover:scale-105 inline-block">Hubungi Kami</a>
+                            </div>
+                        </div>
+                        <div class="flex justify-center items-center order-1 md:order-2">
+                            <div class="relative">
+                                <div class="w-64 h-64 sm:w-72 sm:h-72 md:w-80 md:h-80 lg:w-96 lg:h-96 bg-[#ffd700]/20 rounded-3xl flex items-center justify-center border-2 border-[#ffd700]/30 backdrop-blur-sm">
+                                    <span class="text-8xl sm:text-9xl md:text-[10rem]">🩺</span>
+                                </div>
+                                <div class="absolute -bottom-2 -right-2 bg-white rounded-2xl shadow-xl px-5 py-3 min-w-[120px]">
+                                    <p class="text-base font-semibold text-[#2d5a27] text-center">💚 Sehat</p>
+                                    <p class="text-sm text-gray-500 text-center">Perawatan Terbaik</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- TOMBOL SLIDER -->
+        <button id="prevSlide" class="slider-btn prev-btn">‹</button>
+        <button id="nextSlide" class="slider-btn next-btn">›</button>
+
+        <!-- INDIKATOR -->
+        <div class="dots-container">
+            <button class="dot active" data-index="0"></button>
+            <button class="dot" data-index="1"></button>
+            <button class="dot" data-index="2"></button>
+        </div>
+
+    </section>
+
+    <!-- ============ TENTANG KAMI ============ -->
+    <section id="about" class="py-16 md:py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-12">
+                <p class="text-[#ffd700] font-semibold text-sm uppercase tracking-wider">Tentang Kami</p>
+                <h2 class="text-3xl md:text-4xl font-bold text-[#2d5a27] mt-2">Kicau Mania</h2>
+                <div class="w-20 h-1 bg-[#ffd700] mx-auto mt-3 rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <p class="text-gray-600 text-lg leading-relaxed">
+                        <span class="font-bold text-[#2d5a27]">Kicau Mania</span> adalah pusat perlengkapan dan perawatan burung kicau yang menyediakan burung berkualitas, aksesoris, dan layanan perawatan profesional dengan pelayanan ramah setiap hari.
+                    </p>
+                    <p class="text-gray-600 text-lg leading-relaxed mt-4">
+                        Menggunakan tenaga ahli dan berpengalaman untuk menjaga kesehatan dan performa burung di setiap perawatan.
+                    </p>
+                    <p class="text-gray-600 text-lg leading-relaxed mt-4">
+                        Melayani penjualan burung, penitipan, konsultasi kesehatan, dan event lomba burung.
+                    </p>
+                    <div class="mt-6 flex items-center gap-4 flex-wrap">
+                        <div class="bg-[#f5f0e8] rounded-2xl px-6 py-3 text-center">
+                            <p class="text-3xl font-bold text-[#2d5a27]">10+</p>
+                            <p class="text-sm text-gray-500">Tahun Pengalaman</p>
+                        </div>
+                        <div class="bg-[#f5f0e8] rounded-2xl px-6 py-3 text-center">
+                            <p class="text-3xl font-bold text-[#2d5a27]">500+</p>
+                            <p class="text-sm text-gray-500">Pelanggan Puas</p>
+                        </div>
+                        <div class="bg-[#f5f0e8] rounded-2xl px-6 py-3 text-center">
+                            <p class="text-3xl font-bold text-[#2d5a27]">50+</p>
+                            <p class="text-sm text-gray-500">Event Lomba</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex justify-center">
+                    <div class="w-full max-w-md bg-[#f5f0e8] rounded-3xl p-8 text-center aspect-square flex items-center justify-center border-2 border-[#ffd700]/30">
+                        <div>
+                            <span class="text-8xl"><img src="https://images.unsplash.com/photo-1552728089-57bdde30beb3?w=400&h=250&fit=crop" alt="Penjualan Burung"></span>
+                            <p class="text-2xl font-bold text-[#2d5a27] mt-4">Kicau Mania</p>
+                            <p class="text-gray-500">Sejak 2016</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ LAYANAN ============ -->
+    <section id="services" class="py-16 md:py-24 bg-[#f5f0e8]">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-12">
+                <p class="text-[#ffd700] font-semibold text-sm uppercase tracking-wider">Layanan</p>
+                <h2 class="text-3xl md:text-4xl font-bold text-[#2d5a27] mt-2">Layanan Spesial</h2>
+                <div class="w-20 h-1 bg-[#ffd700] mx-auto mt-3 rounded-full"></div>
+                <p class="text-gray-600 max-w-2xl mx-auto mt-4 text-lg">
+                    Kami menyediakan layanan terbaik untuk burung kesayangan Anda
+                </p>
+            </div>
+
+            <!-- Layanan Spesial -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+                <div class="bg-white rounded-2xl p-10 text-center shadow-md hover:shadow-xl transition hover:-translate-y-2 border-2 border-transparent hover:border-[#ffd700]">
+                    <div class="text-7xl mb-4">🏆</div>
+                    <h3 class="text-2xl font-bold text-[#2d5a27]">Lomba Burung</h3>
+                    <p class="text-gray-600 mt-3 text-lg">Event rutin lomba burung kicau dengan hadiah menarik dan juri profesional.</p>
+                </div>
+                <div class="bg-white rounded-2xl p-10 text-center shadow-md hover:shadow-xl transition hover:-translate-y-2 border-2 border-transparent hover:border-[#ffd700]">
+                    <div class="text-7xl mb-4">🏠</div>
+                    <h3 class="text-2xl font-bold text-[#2d5a27]">Penitipan Burung</h3>
+                    <p class="text-gray-600 mt-3 text-lg">Perawatan harian profesional saat Anda bepergian dengan tenaga ahli.</p>
+                </div>
+                <div class="bg-white rounded-2xl p-10 text-center shadow-md hover:shadow-xl transition hover:-translate-y-2 border-2 border-transparent hover:border-[#ffd700]">
+                    <div class="text-7xl mb-4">🩺</div>
+                    <h3 class="text-2xl font-bold text-[#2d5a27]">Konsultasi Kesehatan</h3>
+                    <p class="text-gray-600 mt-3 text-lg">Konsultasi gratis dengan ahli perawatan burung berpengalaman.</p>
+                </div>
+            </div>
+
+            <!-- Layanan Yang Kami Tawarkan (dengan gambar) -->
+            <div class="text-center mb-12">
+                <h3 class="text-2xl md:text-3xl font-bold text-[#2d5a27] mt-2">Layanan Yang Kami Tawarkan</h3>
+                <div class="w-20 h-1 bg-[#ffd700] mx-auto mt-3 rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+                <!-- Layanan 1 - Penjualan Burung -->
+                <div class="service-item bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition hover:-translate-y-2 border-2 border-transparent hover:border-[#ffd700]">
+                    <img src="https://images.unsplash.com/photo-1552728089-57bdde30beb3?w=400&h=250&fit=crop" alt="Penjualan Burung" class="w-full h-48 object-cover">
+                    <div class="p-4 text-center">
+                        <h4 class="text-xl font-bold text-[#2d5a27]">Penjualan Burung</h4>
+                        <p class="text-[#ffd700] font-bold text-lg mt-1">Rp 500.000 - 5.000.000</p>
+                        <p class="text-gray-600 text-sm mt-1">Lovebird, Kenari, Murai Batu, Kacer, Pleci</p>
+                    </div>
+                </div>
+                <!-- Layanan 2 - Penitipan Harian -->
+                <div class="service-item bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition hover:-translate-y-2 border-2 border-transparent hover:border-[#ffd700]">
+                    <img src="https://images.unsplash.com/photo-1552728089-57bdde30beb3?w=400&h=250&fit=crop" alt="Penitipan Harian" class="w-full h-48 object-cover">
+                    <div class="p-4 text-center">
+                        <h4 class="text-xl font-bold text-[#2d5a27]">Penitipan Harian</h4>
+                        <p class="text-[#ffd700] font-bold text-lg mt-1">Rp 50.000 / hari</p>
+                        <p class="text-gray-600 text-sm mt-1">Perawatan penuh saat Anda bepergian</p>
+                    </div>
+                </div>
+                <!-- Layanan 3 - Konsultasi Kesehatan -->
+                <div class="service-item bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition hover:-translate-y-2 border-2 border-transparent hover:border-[#ffd700]">
+                    <img src="https://images.unsplash.com/photo-1552728089-57bdde30beb3?w=400&h=250&fit=crop" alt="Konsultasi Kesehatan" class="w-full h-48 object-cover">
+                    <div class="p-4 text-center">
+                        <h4 class="text-xl font-bold text-[#2d5a27]">Konsultasi Kesehatan</h4>
+                        <p class="text-[#ffd700] font-bold text-lg mt-1">Rp 100.000 / sesi</p>
+                        <p class="text-gray-600 text-sm mt-1">Konsultasi dengan ahli kesehatan burung</p>
+                    </div>
+                </div>
+                <!-- Layanan 4 - Paket Liwetan -->
+                <div class="service-item bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition hover:-translate-y-2 border-2 border-transparent hover:border-[#ffd700]">
+                    <img src="https://images.unsplash.com/photo-1552728089-57bdde30beb3?w=400&h=250&fit=crop" alt="Paket Liwetan" class="w-full h-48 object-cover">
+                    <div class="p-4 text-center">
+                        <h4 class="text-xl font-bold text-[#2d5a27]">Paket Liwetan</h4>
+                        <p class="text-[#ffd700] font-bold text-lg mt-1">Rp 200.000 - 500.000</p>
+                        <p class="text-gray-600 text-sm mt-1">Paket perawatan lengkap untuk burung</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ PORTFOLIO ============ -->
+    <section id="portfolio" class="py-16 md:py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-12">
+                <p class="text-[#ffd700] font-semibold text-sm uppercase tracking-wider">Portfolio</p>
+                <h2 class="text-3xl md:text-4xl font-bold text-[#2d5a27] mt-2">Lihat Karya Menakjubkan Kami</h2>
+                <div class="w-20 h-1 bg-[#ffd700] mx-auto mt-3 rounded-full"></div>
+                <p class="text-gray-600 max-w-2xl mx-auto mt-4 text-lg">
+                    Mengenal kami lebih dekat, lihat karya-karya yang telah kami buat dengan penuh dedikasi.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <!-- Portfolio Item 1 - Lovebird -->
+                <div class="portfolio-item bg-[#f5f0e8] rounded-2xl overflow-hidden hover:shadow-xl transition hover:scale-105 cursor-pointer border-2 border-transparent hover:border-[#ffd700]" data-modal="modal1">
+                    <img src="https://images.unsplash.com/photo-1552728089-57bdde30beb3?w=400&h=400&fit=crop" alt="Lovebird" class="w-full h-48 object-cover">
+                    <div class="p-4 text-center">
+                        <p class="text-base font-semibold text-[#2d5a27]">Lovebird</p>
+                    </div>
+                </div>
+                <!-- Portfolio Item 2 - Kenari -->
+                <div class="portfolio-item bg-[#f5f0e8] rounded-2xl overflow-hidden hover:shadow-xl transition hover:scale-105 cursor-pointer border-2 border-transparent hover:border-[#ffd700]" data-modal="modal2">
+                    <img src="https://images.unsplash.com/photo-1552728089-57bdde30beb3?w=400&h=400&fit=crop&sat=-100" alt="Kenari" class="w-full h-48 object-cover">
+                    <div class="p-4 text-center">
+                        <p class="text-base font-semibold text-[#2d5a27]">Kenari</p>
+                    </div>
+                </div>
+                <!-- Portfolio Item 3 - Murai Batu -->
+                <div class="portfolio-item bg-[#f5f0e8] rounded-2xl overflow-hidden hover:shadow-xl transition hover:scale-105 cursor-pointer border-2 border-transparent hover:border-[#ffd700]" data-modal="modal3">
+                    <img src="https://images.unsplash.com/photo-1552728089-57bdde30beb3?w=400&h=400&fit=crop&sat=50" alt="Murai Batu" class="w-full h-48 object-cover">
+                    <div class="p-4 text-center">
+                        <p class="text-base font-semibold text-[#2d5a27]">Murai Batu</p>
+                    </div>
+                </div>
+                <!-- Portfolio Item 4 - Cucak Jenggot -->
+                <div class="portfolio-item bg-[#f5f0e8] rounded-2xl overflow-hidden hover:shadow-xl transition hover:scale-105 cursor-pointer border-2 border-transparent hover:border-[#ffd700]" data-modal="modal4">
+                    <img src="https://images.unsplash.com/photo-1552728089-57bdde30beb3?w=400&h=400&fit=crop&sat=30" alt="Cucak Jenggot" class="w-full h-48 object-cover">
+                    <div class="p-4 text-center">
+                        <p class="text-base font-semibold text-[#2d5a27]">Cucak Jenggot</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ WHY CHOOSE US (Background Gambar + Video Button) ============ -->
+    <section id="why" class="py-16 md:py-24 relative" style="background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1552728089-57bdde30beb3?w=1200') center/cover no-repeat; background-attachment: fixed;">
+        <div class="max-w-7xl mx-auto px-4 relative z-10">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <p class="text-[#ffd700] font-semibold text-sm uppercase tracking-wider">Why Choose Us</p>
+                    <h2 class="text-3xl md:text-4xl font-bold text-white mt-2">Mengapa Memilih Kicau Mania?</h2>
+                    <div class="w-20 h-1 bg-[#ffd700] mt-3 rounded-full"></div>
+                    <p class="text-gray-300 text-lg leading-relaxed mt-4">
+                        Kami menghadirkan burung berkualitas, perawatan profesional, pelayanan ramah, dan pengalaman terbaik untuk setiap pelanggan.
+                    </p>
+                    <div class="mt-6 space-y-4">
+                        <div class="flex items-start gap-4">
+                            <span class="text-[#ffd700] text-2xl">🐦</span>
+                            <div>
+                                <h4 class="font-bold text-white text-lg">Burung Berkualitas</h4>
+                                <p class="text-gray-300">Menghadirkan burung kicau dengan kualitas terbaik dan sehat.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <span class="text-[#ffd700] text-2xl">🏠</span>
+                            <div>
+                                <h4 class="font-bold text-white text-lg">Perawatan Profesional</h4>
+                                <p class="text-gray-300">Perawatan harian dengan tenaga ahli yang berpengalaman.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <span class="text-[#ffd700] text-2xl">🏆</span>
+                            <div>
+                                <h4 class="font-bold text-white text-lg">Event Lomba</h4>
+                                <p class="text-gray-300">Menyelenggarakan lomba burung kicau dengan hadiah menarik.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- TOMBOL VIDEO -->
+                    <button id="videoButton" class="mt-6 bg-[#ffd700] text-[#2d5a27] px-8 py-3.5 rounded-full font-bold hover:bg-yellow-300 transition-all duration-300 shadow-lg hover:shadow-[#ffd700]/30 hover:scale-105 inline-flex items-center gap-2">
+                        <span>▶</span> Putar Video
+                    </button>
+                </div>
+                <div class="flex justify-center">
+                    <div class="relative w-full max-w-md">
+                        <div class="bg-[#ffd700]/10 rounded-3xl p-8 text-center aspect-video flex items-center justify-center border-2 border-[#ffd700]/30 backdrop-blur-sm">
+                            <div>
+                                <span class="text-8xl">🐦</span>
+                                <p class="text-2xl font-bold text-[#ffd700] mt-4">Kicau Mania</p>
+                                <p class="text-gray-300">Pusat Burung Kicau</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ TIM ============ -->
+    <section id="team" class="py-16 md:py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-12">
+                <p class="text-[#ffd700] font-semibold text-sm uppercase tracking-wider">Tim Kami</p>
+                <h2 class="text-3xl md:text-4xl font-bold text-[#2d5a27] mt-2">Tim Profesional Kami</h2>
+                <div class="w-20 h-1 bg-[#ffd700] mx-auto mt-3 rounded-full"></div>
+                <p class="text-gray-600 max-w-2xl mx-auto mt-4 text-lg">
+                    Kami memiliki tim yang berdedikasi untuk memberikan pelayanan terbaik bagi burung kesayangan Anda.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-[#f5f0e8] rounded-2xl p-8 text-center shadow-md hover:shadow-xl transition hover:-translate-y-2">
+                    <div class="w-28 h-28 bg-[#ffd700]/20 rounded-full mx-auto flex items-center justify-center text-5xl">🐦</div>
+                    <h3 class="text-2xl font-bold text-[#2d5a27] mt-4">Andi</h3>
+                    <p class="text-[#ffd700] font-semibold text-lg">Head Breeder</p>
+                    <p class="text-gray-600 text-base mt-2">Ahli dalam perawatan dan pengembangbiakan burung kicau.</p>
+                    <div class="mt-4 flex justify-center gap-4">
+                        <a href="https://wa.me/6281234567890" target="_blank" class="text-[#2d5a27] hover:text-[#ffd700] text-2xl"><img src="fontawesome/svgs/brands/whatsapp.svg" class="w-5 h-5 bg-[#ffd700]/20 rounded-full mx-auto flex items-center justify-center"></a>
+                        <a href="https://twitter.com" target="_blank" class="text-[#2d5a27] hover:text-[#ffd700] text-2xl"><img src="fontawesome/svgs/brands/square-twitter.svg" class="w-5 h-5 bg-[#ffd700]/20 rounded-full mx-auto flex items-center justify-center"></a>
+                        <a href="https://instagram.com" target="_blank" class="text-[#2d5a27] hover:text-[#ffd700] text-2xl"><img src="fontawesome/svgs/brands/instagram.svg" class="w-5 h-5 bg-[#ffd700]/20 rounded-full mx-auto flex items-center justify-center"></a>
+                    </div>
+                </div>
+                <div class="bg-[#f5f0e8] rounded-2xl p-8 text-center shadow-md hover:shadow-xl transition hover:-translate-y-2">
+                    <div class="w-28 h-28 bg-[#ffd700]/20 rounded-full mx-auto flex items-center justify-center text-5xl">📋</div>
+                    <h3 class="text-2xl font-bold text-[#2d5a27] mt-4">Sinta</h3>
+                    <p class="text-[#ffd700] font-semibold text-lg">Manager Operasional</p>
+                    <p class="text-gray-600 text-base mt-2">Memastikan setiap layanan berjalan dengan profesional.</p>
+                    <div class="mt-4 flex justify-center gap-4">
+                        <a href="https://wa.me/6281234567890" target="_blank" class="text-[#2d5a27] hover:text-[#ffd700] text-2xl"><img src="fontawesome/svgs/brands/whatsapp.svg" class="w-5 h-5 bg-[#ffd700]/20 rounded-full mx-auto flex items-center justify-center"></a>
+                        <a href="https://twitter.com" target="_blank" class="text-[#2d5a27] hover:text-[#ffd700] text-2xl"><img src="fontawesome/svgs/brands/square-twitter.svg" class="w-5 h-5 bg-[#ffd700]/20 rounded-full mx-auto flex items-center justify-center"></a>
+                        <a href="https://instagram.com" target="_blank" class="text-[#2d5a27] hover:text-[#ffd700] text-2xl"><img src="fontawesome/svgs/brands/instagram.svg" class="w-5 h-5 bg-[#ffd700]/20 rounded-full mx-auto flex items-center justify-center"></a>
+                    </div>
+                </div>
+                <div class="bg-[#f5f0e8] rounded-2xl p-8 text-center shadow-md hover:shadow-xl transition hover:-translate-y-2">
+                    <div class="w-28 h-28 bg-[#ffd700]/20 rounded-full mx-auto flex items-center justify-center text-5xl">💬</div>
+                    <h3 class="text-2xl font-bold text-[#2d5a27] mt-4">Raka</h3>
+                    <p class="text-[#ffd700] font-semibold text-lg">Customer Service</p>
+                    <p class="text-gray-600 text-base mt-2">Siap membantu Anda dengan ramah dan solusi terbaik.</p>
+                    <div class="mt-4 flex justify-center gap-4">
+                        <a href="https://wa.me/6281234567890" target="_blank" class="text-[#2d5a27] hover:text-[#ffd700] text-2xl"><img src="fontawesome/svgs/brands/whatsapp.svg" class="w-5 h-5 bg-[#ffd700]/20 rounded-full mx-auto flex items-center justify-center"></a>
+                        <a href="https://twitter.com" target="_blank" class="text-[#2d5a27] hover:text-[#ffd700] text-2xl"><img src="fontawesome/svgs/brands/square-twitter.svg" class="w-5 h-5 bg-[#ffd700]/20 rounded-full mx-auto flex items-center justify-center"></a>
+                        <a href="https://instagram.com" target="_blank" class="text-[#2d5a27] hover:text-[#ffd700] text-2xl"><img src="fontawesome/svgs/brands/instagram.svg" class="w-5 h-5 bg-[#ffd700]/20 rounded-full mx-auto flex items-center justify-center"></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ============ HUBUNGI KAMI (Background Gambar) ============ -->
+            <div class="mt-16 rounded-3xl p-8 md:p-12 text-center text-white relative overflow-hidden" style="background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1552728089-57bdde30beb3?w=1200') center/cover no-repeat;">
+                <div class="relative z-10">
+                    <h3 class="text-3xl md:text-4xl font-bold">Nikmati Layanan Terbaik untuk Burung Kesayangan Anda</h3>
+                    <p class="text-gray-300 mt-4 text-lg max-w-2xl mx-auto">
+                        Kicau Mania siap menghadirkan burung berkualitas, perawatan profesional, dan pelayanan terbaik untuk setiap kebutuhan burung kicau Anda.
+                    </p>
+                    <a href="https://wa.me/6281234567890" target="_blank" class="inline-block mt-6 bg-[#ffd700] text-[#2d5a27] px-10 py-4 rounded-full font-bold text-lg hover:bg-yellow-300 transition-all duration-300 shadow-lg hover:shadow-[#ffd700]/30 hover:scale-105">
+                        Hubungi Kami
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+        <!-- ============ TESTIMONI ============ -->
+    <section id="testimonials" class="py-16 md:py-24 bg-[#f5f0e8]">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-12">
+                <p class="text-[#ffd700] font-semibold text-sm uppercase tracking-wider">Reviews</p>
+                <h2 class="text-3xl md:text-4xl font-bold text-[#2d5a27] mt-2">Testimonials</h2>
+                <div class="w-20 h-1 bg-[#ffd700] mx-auto mt-3 rounded-full"></div>
+                <p class="text-gray-600 max-w-2xl mx-auto mt-4 text-lg">
+                    Kepuasan Anda adalah prioritas utama kami. Simak pengalaman nyata dari para pelanggan kami.
+                </p>
+            </div>
+
+            <!-- Testimoni Slider -->
+            <div class="relative max-w-5xl mx-auto">
+                <!-- Container Slide -->
+                <div class="overflow-hidden rounded-2xl">
+                    <div id="testimonialTrack" class="flex transition-transform duration-700 ease-in-out">
+                        <!-- Testimoni 1 -->
+                        <div class="testimonial-slide min-w-full px-4">
+                            <div class="bg-white rounded-2xl p-8 shadow-md max-w-3xl mx-auto">
+                                <div class="flex items-center gap-4 mb-4">
+                                    <div class="w-16 h-16 bg-[#ffd700]/20 rounded-full flex items-center justify-center text-3xl">👨‍🍳</div>
+                                    <div>
+                                        <h4 class="font-bold text-xl text-[#2d5a27]">Ardi Pratama</h4>
+                                        <p class="text-sm text-gray-500">Atlit burung Nusantara</p>
+                                    </div>
+                                </div>
+                                <div class="text-[#ffd700] text-2xl mb-2">★★★★★</div>
+                                <p class="text-gray-700 italic text-lg">"Burung nya terasa autentik seperti esensi asli burung indonesia. Sangat direkomendasikan untuk para pecinta burung!"</p>
+                            </div>
+                        </div>
+
+                        <!-- Testimoni 2 -->
+                        <div class="testimonial-slide min-w-full px-4">
+                            <div class="bg-white rounded-2xl p-8 shadow-md max-w-3xl mx-auto">
+                                <div class="flex items-center gap-4 mb-4">
+                                    <div class="w-16 h-16 bg-[#ffd700]/20 rounded-full flex items-center justify-center text-3xl">👩‍🍳</div>
+                                    <div>
+                                        <h4 class="font-bold text-xl text-[#2d5a27]">Maya Kusuma</h4>
+                                        <p class="text-sm text-gray-500">Bird Reviewer</p>
+                                    </div>
+                                </div>
+                                <div class="text-[#ffd700] text-2xl mb-2">★★★★★</div>
+                                <p class="text-gray-700 italic text-lg">"Pilihan burungnya lengkap dan kualitasnya bagus. Pelayanan ramah dan tempat yang nyaman."</p>
+                            </div>
+                        </div>
+
+                        <!-- Testimoni 3 -->
+                        <div class="testimonial-slide min-w-full px-4">
+                            <div class="bg-white rounded-2xl p-8 shadow-md max-w-3xl mx-auto">
+                                <div class="flex items-center gap-4 mb-4">
+                                    <div class="w-16 h-16 bg-[#ffd700]/20 rounded-full flex items-center justify-center text-3xl">📸</div>
+                                    <div>
+                                        <h4 class="font-bold text-xl text-[#2d5a27]">Rendra Wijaya</h4>
+                                        <p class="text-sm text-gray-500">Content Creator burung</p>
+                                    </div>
+                                </div>
+                                <div class="text-[#ffd700] text-2xl mb-2">★★★★★</div>
+                                <p class="text-gray-700 italic text-lg">"Tempat yang nyaman untuk pengunjung. Burung-burungnya sehat dan perawatannya profesional."</p>
+                            </div>
+                        </div>
+
+                        <!-- Testimoni 4 -->
+                        <div class="testimonial-slide min-w-full px-4">
+                            <div class="bg-white rounded-2xl p-8 shadow-md max-w-3xl mx-auto">
+                                <div class="flex items-center gap-4 mb-4">
+                                    <div class="w-16 h-16 bg-[#ffd700]/20 rounded-full flex items-center justify-center text-3xl">✍️</div>
+                                    <div>
+                                        <h4 class="font-bold text-xl text-[#2d5a27]">Budi Santoso</h4>
+                                        <p class="text-sm text-gray-500">Blogger Kuliner</p>
+                                    </div>
+                                </div>
+                                <div class="text-[#ffd700] text-2xl mb-2">★★★★★</div>
+                                <p class="text-gray-700 italic text-lg">"Salah satu toko burung terbaik di Indonesia. Kualitas burung dan pelayanan sangat memuaskan."</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tombol Previous & Next -->
+                <button id="prevTestimonial" class="absolute left-0 top-1/2 -translate-y-1/2 -ml-4 md:-ml-6 z-10 bg-[#2d5a27] hover:bg-[#1e3a1a] text-white w-10 h-10 md:w-12 md:h-12 rounded-full flex items-center justify-center text-2xl shadow-lg transition-all duration-300 ">
+                    ‹
+                </button>
+                <button id="nextTestimonial" class="absolute right-0 top-1/2 -translate-y-1/2 -mr-4 md:-mr-6 z-10 bg-[#2d5a27] hover:bg-[#1e3a1a] text-white w-10 h-10 md:w-12 md:h-12 rounded-full flex items-center justify-center text-2xl shadow-lg transition-all duration-300">
+                    ›
+                </button>
+
+                <!-- Indikator Dots -->
+                <div class="flex justify-center gap-3 mt-6">
+                    <button class="testimonial-dot w-3 h-3 rounded-full bg-[#ffd700] transition-all duration-300" data-index="0"></button>
+                    <button class="testimonial-dot w-3 h-3 rounded-full bg-gray-300 hover:bg-gray-400 transition-all duration-300" data-index="1"></button>
+                    <button class="testimonial-dot w-3 h-3 rounded-full bg-gray-300 hover:bg-gray-400 transition-all duration-300" data-index="2"></button>
+                    <button class="testimonial-dot w-3 h-3 rounded-full bg-gray-300 hover:bg-gray-400 transition-all duration-300" data-index="3"></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ FOOTER ============ -->
+    <footer class="bg-[#1e3a1a] text-white">
+        <div class="max-w-7xl mx-auto px-4 py-12">
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+                <div>
+                    <h4 class="text-xl font-bold text-[#ffd700] mb-3">Kicau Mania</h4>
+                    <p class="text-gray-300 text-lg">Pusat perlengkapan dan perawatan burung kicau terlengkap.</p>
+                </div>
+                <div>
+                    <h4 class="text-xl font-bold text-[#ffd700] mb-3">Layanan</h4>
+                    <p class="text-gray-300 text-lg">Penjualan Burung</p>
+                    <p class="text-gray-300 text-lg">Penitipan Burung</p>
+                    <p class="text-gray-300 text-lg">Konsultasi Kesehatan</p>
+                    <p class="text-gray-300 text-lg">Event Lomba</p>
+                </div>
+                <div>
+                    <h4 class="text-xl font-bold text-[#ffd700] mb-3">Kontak</h4>
+                    <p class="text-gray-300 text-lg">📞 0812-3456-7890</p>
+                    <p class="text-gray-300 text-lg">✉️ kicaumania@gmail.com</p>
+                    <p class="text-gray-300 text-lg">📍 Jl. Karangmenur No. 11, Surabaya</p>
+                </div>
+                <div>
+                    <h4 class="text-xl font-bold text-[#ffd700] mb-3">Jam Buka</h4>
+                    <p class="text-gray-300 text-lg">Senin - Jumat: 09:00 - 16:00</p>
+                    <p class="text-gray-300 text-lg">Minggu: Tutup</p>
+                </div>
+            </div>
+            <div class="border-t border-[#4a7a44] mt-8 pt-6 text-center text-gray-400 text-lg">
+                <p>&copy; 2026 Kicau Mania. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ============ MODAL PORTOFOLIO ============ -->
+    <div id="modalOverlay" class="modal-overlay hidden">
+        <div class="modal-content max-w-2xl">
+            <button class="modal-close" id="modalClose">&times;</button>
+            <div id="modalBody">
+                <!-- Gambar -->
+                <div class="w-full h-64 rounded-2xl overflow-hidden mb-4">
+                    <img id="modalImage" src="" alt="Burung" class="w-full h-full object-cover">
+                </div>
+                <!-- Judul -->
+                <h3 id="modalTitle" class="text-3xl font-bold text-[#2d5a27] text-center"></h3>
+                <!-- Kategori -->
+                <div class="mt-2 text-center">
+                    <span id="modalCategory" class="bg-[#ffd700]/20 text-[#2d5a27] px-4 py-1 rounded-full text-sm font-semibold">Kategori: -</span>
+                </div>
+                <!-- Deskripsi -->
+                <div class="mt-4">
+                    <p id="modalDescription" class="text-gray-600 text-center text-lg">Deskripsi burung</p>
+                </div>
+                <!-- Tombol Link -->
+                <div class="mt-6 text-center">
+                    <a id="modalLink" href="#" target="_blank" class="bg-[#ffd700] text-[#2d5a27] px-8 py-3 rounded-full font-bold hover:bg-yellow-300 transition-all duration-300 shadow-lg hover:shadow-[#ffd700]/30 hover:scale-105 inline-block">Lihat Detail</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============ VIDEO MODAL ============ -->
+    <div id="videoModalOverlay" class="modal-overlay hidden">
+        <div class="modal-content max-w-3xl">
+            <button class="modal-close" id="videoModalClose">&times;</button>
+            <div class="aspect-video">
+                <iframe id="videoIframe" width="100%" height="100%" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Kicau Mania Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
